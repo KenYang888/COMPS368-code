@@ -11,21 +11,17 @@
     <body>
         <table>
             <tr>
-                <th>Id</th>
-                <td th:text="${thisIsMyModel.id}" />
-            </tr>            
-            <tr>
+                <th>#</th>
                 <th>Name</th>
-                <td th:text="${thisIsMyModel.name}" />
-            </tr>
-            <tr>
                 <th>Phone</th>
-                <td th:text="${thisIsMyModel.phone}" />
-            </tr>
-            <tr>
                 <th>Email</th>
-                <td th:text="${thisIsMyModel.email}" />
             </tr>            
+            <tr th:each="ss : ${allContacts}">
+                <td th:text="${ss.id}" />
+                <td th:text="${ss.name}" />
+                <td th:text="${ss.phone}" />
+                <td th:text="${ss.email}" />
+            </tr>          
         </table>
     </body>
 </html>
